@@ -52,7 +52,7 @@ handler.all = async function (m) {
 					description: wm3,
 					previewType: "PHOTO",
 					thumbnail: await (await fetch(pic)).buffer(),
-					sourceUrl: "https://github.com/ImYanXiao",					
+					sourceUrl: "https://wa.me/c/6281383910736",					
 				}
 			}
 		}
@@ -106,9 +106,9 @@ handler.all = async function (m) {
     } }
 global.fakefb = {
          contextInfo: { externalAdReply: { showAdAttribution: true,
-            mediaUrl: "https://Facebook.com/zuck",
+            mediaUrl: "https://Facebook.com/",
             mediaType: "VIDEO",
-            description: "https://www.Facebook.com/zuck", 
+            description: "https://www.Facebook.com/", 
             title: wm3,
             body: wm,
             thumbnailUrl: pp,
@@ -210,7 +210,7 @@ global.fakefb = {
                "groupInviteMessage": {
                    "groupJid": "6285736178354-1625305606@g.us",
                    "inviteCode": "null",
-                   "groupName": "Kawan Elaina", 
+                   "groupName": "Kawan Seika", 
                    "caption": wm, 
                    'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')
                }
