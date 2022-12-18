@@ -18,6 +18,47 @@ const delay = ms => isNumber(ms) && new Promise(resolve => setTimeout(function (
     resolve()
 }, ms))
 
+/*
+Tambahin di handler
+
+if (!('backup' in setting) settings.backup = true
+if (!isNumber(setting.backupTime)) setting.backupTime = 0
+
+*/
+
+import * as fs from 'fs';
+
+let handler = m => m
+
+handler.before = async function (m) {
+	
+	let setting = global.db.data.settings[this.user.jid];
+	let backup = setting.backup;  // Database nya on apa off?
+	let backupTime = setting.backupTime;
+	
+	if (!backup) return; // Jika auto backup mati maka berhenti smpe disini saja ya, krna udah gk pantes buat siapa" hehe ☺️
+	
+	let Owner = global.owner[0] + '@s.whatsapp.net';
+	let fileName = 'database.json';
+	
+	if (new Date() * 1 - backupTime > 1000 * 60 * 60) {
+		let d = new Date;
+		let date = d.toLocaleString('id', {
+			day: 'numeric',
+			month: 'long',
+			year: 'numeric'
+		});
+		let data = await fs.readFileSync(`./${fileName}`);
+		await this.reply(Owner, `Database: ${date}`, null).then(M => {
+			this.sendMessage(Owner, { document: data, fileName, mimetype: 'application/json' }, { quoted: M });
+			setting.backupTime = new Date() * 1;
+			this.logger.info('Berhasil mengirim database!');
+		}).catch(_ => null);
+	};
+	return !0;
+};
+export default handler;
+
 /**
  * Handle messages upsert
  * @param {import('@adiwajshing/baileys').BaileysEventMap<unknown>['messages.upsert']} groupsUpdate 
