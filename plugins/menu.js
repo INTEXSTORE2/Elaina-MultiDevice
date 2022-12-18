@@ -54,7 +54,7 @@ const defaultMenu = {
 `.trimStart(),
   header: '⃝▣──「 %category 」───⬣',
   body: '│○ %cmd %isPremium %islimit',
-  footer: '▣───────────⬣\n',
+  footer: '⫹⫺𝙊𝙬𝙣 𝙎𝙖𝙞𝙙📮 -->Nothing Special From Me\n▣───────────⬣\n',
   after: `%c4 %me`,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
@@ -313,8 +313,8 @@ let tek = `✧────···[ Dashboard ]···────✧
 │⬡ *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* Pengguna Terbanned
 ┬
 ├━━━━━━━━━━━━━━━━┈─⋆
-│ ▸ *ᴀᴜᴛʜᴏʀ :* ʙᴏᴄʜɪʟɢᴀᴍɪɴɢ
-┴ ▸ *ᴏᴡɴᴇʀ :* ɪᴍ-ʏᴀɴxɪᴀᴏ
+│ ▸ *ᴀᴜᴛʜᴏʀ :* sᴇɪᴋᴀ ʙᴏᴛᴢᴢ
+┴ ▸ *ᴏᴡɴᴇʀ :* 𝙄𝙔𝘼𝙉
 ✧
 ┬ 📌 𝗣𝗶𝗻𝗻𝗲𝗱 :
 │ ʙᴇʀɪ ᴊᴇᴅᴀ ʏᴀʜ ᴋᴀᴋ ^ω^
@@ -511,7 +511,7 @@ const listMessage = {
     let d6 = 'application/zip'
     let td = `${pickRandom([d1,d2,d3,d4,d5,d6])}`
     
-   //~~~Source : https://github.com/Rlxfly
+   //~~~Source : https://github.com/
     //------- MENU LOCATION
     const pre = generateWAMessageFromContent(m.chat, { liveLocationMessage:{
   degreesLatitude: 34.672314,
@@ -543,7 +543,7 @@ const listMessage = {
                 {
                     urlButton: {
                         displayText: `${namebot}`,
-                        url: 'https://github.com/ImYanXiao/Elaina-MultiDevice'
+                        url: 'https://wa.me/c/6281383910736'
                     }
                 },
                 {
